@@ -1,5 +1,5 @@
 function Drop(x, y) {
-    var img = loadImage('bullet.gif');
+    var img = loadImage('./image/bullet.gif');
     this.x = x;
     this.y = y;
     this.r = 8;
@@ -12,12 +12,10 @@ function Drop(x, y) {
         noStroke();
         translate(this.x, this.y - 200);
         rotate(this.rotate);
-
         for(let i = 0; i > -5; i--) {
-          fill(color(255, 255, 255, 255 + i * 12));
-          rect(i * this.speed * 0.5 + 60 + this.speed * 4, 0, 5, 5 + i * 0.1);
-        // image(img, 5, 5);
-
+        let h = random(0, 360);
+        fill(h, 90, 90);
+        rect(i * this.speed * 0.5 + 60 + this.speed * 4, 0, 5, 5 + i * 0.1);
         }
         pop();
     }

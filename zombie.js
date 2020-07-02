@@ -1,13 +1,13 @@
 function Zombie(x, y) {
 
-    var img = loadImage('zombie.gif');
+    var img = loadImage('./image/zombie.gif');
 
     this.blood = 3;
     this.x = x;
     this.y = y;
     this.rotate = 0;
     this.r = 30;
-    this.xdir = 1;
+    this.xdir = 5;
 
     this.show = function () {
         push();
@@ -24,9 +24,9 @@ function Zombie(x, y) {
 
     this.move= function(i) {
         if(i%3==0){
-            this.x = this.x + this.xdir;
+            this.x =this.x + this.xdir;
         }else{
-            this.x = this.x - this.xdir;
+            this.x =this.x - this.xdir;
         }
        
     }
