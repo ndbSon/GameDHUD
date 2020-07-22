@@ -7,6 +7,7 @@ var dones =[];
 var createZombie;
 var score;
 var mode;
+
 function setup() {
     mode=0;
     img = loadImage('./image/tenor.gif');
@@ -16,7 +17,6 @@ function setup() {
     ship = new Ship();
     score = new score(); 
 }
-
 function draw() {
     clear();
     if(mode==0){
@@ -126,7 +126,7 @@ function keyPressed() {
             }, 1000);
             mode = 1;
         }
-     
+    
     }
     if (key === '2') {
         if(mode!=1){
@@ -146,6 +146,7 @@ function keyPressed() {
         }
     }
 }
+
 function keyReleased() {
     if (key !== ' ') {
         ship.setxDir(0);

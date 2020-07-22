@@ -2,11 +2,11 @@ function Zombie(x, y) {
 
     var img = loadImage('./image/zombie.gif');
 
-    this.blood = 3;
+    this.blood = 1;
     this.x = x;
     this.y = y;
     this.rotate = 0;
-    this.r = 30;
+    this.r = 100;
     this.xdir = 5;
 
     this.show = function () {

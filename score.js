@@ -5,7 +5,7 @@ function score() {
         rectMode(CENTER);
         push();
         textSize(30);
-        text(`score: ${this.diem}`,20,30)
+        text(`score: ${this.diem}`,80,30)
         pop();
     };
     this.add=function(){

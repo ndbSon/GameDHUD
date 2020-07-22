@@ -20,9 +20,9 @@ function Drop(x, y) {
         pop();
     }
 
-    this.hits = function(chicken) {
-        var d = dist(this.x, this.y, chicken.x, chicken.y);
-        if (d < this.r + chicken.r + 30) {
+    this.hits = function(zombie) {
+        var d = dist(this.x, this.y, zombie.x, zombie.y);
+        if (d < this.r + zombie.r) {
             return true;
         }
         
@@ -36,4 +36,6 @@ function Drop(x, y) {
     this.move = function() {
         this.y = this.y - this.speed;
     }
+    
 }
+
